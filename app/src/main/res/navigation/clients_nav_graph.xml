@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clientsList">
+
+    <fragment
+        android:id="@+id/clientsList"
+        android:name="com.intell.comm.views.clientsModule.clientsList.ClientsListFragment"
+        tools:layout="@layout/fragment_clients_list">
+        <action
+            android:id="@+id/action_clientsListFragment_to_clientDetailsListFragment"
+            app:destination="@id/clientsListDetails" />
+
+        <action
+            android:id="@+id/action_clientsListFragment_to_clientAddFragment"
+            app:destination="@id/clientsAdd" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientsListDetails"
+        android:name="com.intell.comm.views.clientsModule.clientsDetails.ClientsDetailsListFragment"
+        tools:layout="@layout/fragment_clients_details_list">
+        <argument
+            android:name="client_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_clientDetails"
+            app:destination="@id/clientDetails" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_diseaseRegister"
+            app:destination="@id/diseaseRegister" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_allergy"
+            app:destination="@id/allergy" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_notes"
+            app:destination="@id/notes" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_vaccination"
+            app:destination="@id/vaccination" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_encounterHistory"
+            app:destination="@id/encounterHistory" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_appointments"
+            app:destination="@id/appointments" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_vitals"
+            app:destination="@id/vitals" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_medication"
+            app:destination="@id/medication" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_files"
+            app:destination="@id/files" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_otherParty"
+            app:destination="@id/otherParty" />
+        <action
+            android:id="@+id/action_clientsListDetails_to_referral"
+            app:destination="@id/referral" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientsAdd"
+        android:name="com.intell.comm.views.clientsModule.clientsAdd.ClientsAddFragment"
+        tools:layout="@layout/fragment_clients_add">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientDetails"
+        android:name="com.intell.comm.views.clientsModule.clientsDetails.ClientsDetailsFragment"
+        tools:layout="@layout/fragment_clients_details">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_clientDetails_to_clientDetailsEdit"
+            app:destination="@id/editClientDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/diseaseRegister"
+        android:name="com.intell.comm.views.clientsModule.diseaseRegister.DiseaseRegisterListFragment"
+        tools:layout="@layout/fragment_disease_register_list">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_diseaseRegisterList_to_diseaseRegisterListDetails"
+            app:destination="@id/diseaseRegisterListDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allergy"
+        android:name="com.intell.comm.views.clientsModule.allergy.AllergyFragment"
+        tools:layout="@layout/fragment_allergy">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_allergy_to_add_allergy"
+            app:destination="@id/add_allergy" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_allergy"
+        android:name="com.intell.comm.views.clientsModule.allergy.AddAllergyFragment"
+        tools:layout="@layout/fragment_add_allergy">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notes"
+        android:name="com.intell.comm.views.clientsModule.notes.NotesFragment"
+        tools:layout="@layout/fragment_notes">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vaccination"
+        android:name="com.intell.comm.views.clientsModule.vaccination.VaccinationFragment"
+        tools:layout="@layout/fragment_vaccination">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/encounterHistory"
+        android:name="com.intell.comm.views.clientsModule.encounterHistory.EncounterHistoryFragment"
+        tools:layout="@layout/fragment_encounter_history">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appointments"
+        android:name="com.intell.comm.views.clientsModule.appointments.AppointmentsFragment"
+        tools:layout="@layout/fragment_appointments">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vitals"
+        android:name="com.intell.comm.views.clientsModule.vitals.VitalsFragment"
+        tools:layout="@layout/fragment_vitals">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/medication"
+        android:name="com.intell.comm.views.clientsModule.medication.MedicationFragment"
+        tools:layout="@layout/fragment_medication">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/files"
+        android:name="com.intell.comm.views.clientsModule.files.FilesFragment"
+        tools:layout="@layout/fragment_files">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otherParty"
+        android:name="com.intell.comm.views.clientsModule.otherParty.OtherPartyFragment"
+        tools:layout="@layout/fragment_other_party">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/referral"
+        android:name="com.intell.comm.views.clientsModule.referral.ReferralFragment"
+        tools:layout="@layout/fragment_referral">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editClientDetails"
+        android:name="com.intell.comm.views.clientsModule.editClientDetails.EditClientDetailsFragment"
+        tools:layout="@layout/fragment_edit_client_details">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/diseaseRegisterListDetails"
+        android:name="com.intell.comm.views.clientsModule.diseaseRegister.DiseaseRegisterListDetailsFragment"
+        tools:layout="@layout/fragment_disease_register_list_details">
+        <argument
+            android:name="disease_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_diseaseRegisterListDetails_to_diseaseRegisterDetails"
+            app:destination="@id/diseaseRegisterDetails" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/diseaseRegisterDetails"
+        android:name="com.intell.comm.views.clientsModule.diseaseRegister.DiseaseRegisterDetailsFragment"
+        tools:layout="@layout/fragment_disease_register_details">
+        <argument
+            android:name="disease_name"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

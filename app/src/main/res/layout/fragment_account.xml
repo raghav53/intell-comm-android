@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.homeViews.account.AccountFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.homeViews.account.AccountViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/constraint_profile"
+                android:layout_width="match_parent"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_5sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_category"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dummy_user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/TextViewMedium12"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Yani"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_date"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/TextViewRegular10"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="View and Edit Profile"
+                    android:textColor="@color/list_small_text_color"
+                    app:layout_constraintStart_toEndOf="@+id/iv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_security_pin"
+                android:layout_width="match_parent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:id="@+id/iv_sec"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/ic_ellipse_dot"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/ic_security"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+                </RelativeLayout>
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Security Pin"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_right_security"
+                    app:layout_constraintStart_toEndOf="@+id/iv_sec"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_right_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_change_password"
+                android:layout_width="match_parent"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_password"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/ic_ellipse_dot"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/ic_security"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+                </RelativeLayout>
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Change Password"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_right_password"
+                    app:layout_constraintStart_toEndOf="@+id/rl_password"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_right_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_logout"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:layout_width="match_parent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_logout"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/ic_ellipse_dot"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/ic_logout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+                </RelativeLayout>
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Logout"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_right_logout"
+                    app:layout_constraintStart_toEndOf="@+id/rl_logout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_right_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF53c3cd</color>
+    <color name="teal_700">#FF2ca4af</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_20">#CCFFFFFF</color>
+    <color name="transparent_20">#33000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="middle_trans">#6FFF602E</color>
+    <color name="yellow_light">#FFC54D</color>
+    <color name="text_validation_error">#F68484</color>
+    <color name="red">#FFFF0000</color>
+
+    <color name="intro_bg">#F5FAFB</color>
+    <color name="black_medium">#FF606175</color>
+    <color name="welcome_text_color">#FF494947</color>
+    <color name="welcome_dot_selected">#2ca4af</color>
+    <color name="hint_text_color">#757575</color>
+    <color name="edit_bg_color">#EEFEFF</color>
+    <color name="edit_line_color">#B3F9FF</color>
+    <color name="edit_line_red">#F68484</color>
+    <color name="theme_btn_bg">#53C3CD</color>
+    <color name="btn_text_color">#00838F</color>
+    <color name="black_title_color">#FF18182C</color>
+    <color name="list_small_text_color">#4A4A4A</color>
+    <color name="add_client_hint_color">#C9C9C9</color>
+    <color name="client_detail_hint_color">#808080</color>
+
+</resources>

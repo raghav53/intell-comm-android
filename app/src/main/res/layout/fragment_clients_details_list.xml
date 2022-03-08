@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.clientsModule.clientsDetails.ClientsDetailsListFragment">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.clientsModule.clientsDetails.ClientsDetailsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/intro_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_bg_white_white"
+            android:elevation="@dimen/_3sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_name_title"
+                style="@style/TextViewRegular12"
+                android:text="@string/name_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/last_name"
+                android:textColor="@color/welcome_dot_selected"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_name_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_name_title" />
+
+            <TextView
+                android:id="@+id/tv_reg_title"
+                style="@style/TextViewRegular12"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/registration_no_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_title" />
+
+            <TextView
+                android:id="@+id/tv_registration"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/last_name"
+                android:textColor="@color/welcome_dot_selected"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_reg_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_reg_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_reg_title" />
+
+            <TextView
+                android:id="@+id/tv_dob_title"
+                style="@style/TextViewRegular12"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/d_o_b_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_reg_title" />
+
+            <TextView
+                android:id="@+id/tv_dob"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/last_name"
+                android:textColor="@color/welcome_dot_selected"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_dob_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_dob_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_dob_title" />
+
+            <TextView
+                android:id="@+id/tv_age_title"
+                style="@style/TextViewRegular12"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/age_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/last_name"
+                android:textColor="@color/welcome_dot_selected"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_age_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_age_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_age_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_clients"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fillViewport="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

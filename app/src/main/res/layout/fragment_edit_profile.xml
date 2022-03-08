@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.commonModules.profile.EditProfileFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="is_toolbar_back"
+            type="boolean" />
+
+        <variable
+            name="is_toolbar_title"
+            type="boolean" />
+
+        <variable
+            name="toolbar_title"
+            type="String" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.commonModules.profile.EditProfileViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/intro_bg"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <View
+                android:id="@+id/v_middle_vertical"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_f_name"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_name"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_f_name" />
+
+
+            <TextView
+                android:id="@+id/tv_dob"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/date_of_birth"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_dob"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/enter_dob"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
+
+
+            <TextView
+                android:id="@+id/tv_country"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/country"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+            <EditText
+                android:id="@+id/et_country"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/drop_down"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/country"
+                android:importantForAutofill="no"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/state"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/et_dob" />
+
+            <EditText
+                android:id="@+id/et_state"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/drop_down"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/state"
+                android:importantForAutofill="no"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_state" />
+
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_country" />
+
+            <EditText
+                android:id="@+id/et_city"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/drop_down"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/city"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+            <TextView
+                android:id="@+id/tv_country_code"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/country_code"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/et_state" />
+
+
+            <EditText
+                android:id="@+id/et_country_code"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/country_code"
+                android:importantForAutofill="no"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_code" />
+
+            <TextView
+                android:id="@+id/tv_area_code"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/area_code"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_city" />
+
+            <EditText
+                android:id="@+id/et_area_code"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/area_code"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_code" />
+
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                style="@style/TextViewRegular12"
+
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/phone_number"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/et_country_code" />
+
+            <EditText
+                android:id="@+id/et_phone_no"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/phone_number"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
+
+
+            <TextView
+                android:id="@+id/tv_pincode"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/pincode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_area_code" />
+
+            <EditText
+                android:id="@+id/et_pincode"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/pincode"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pincode" />
+
+
+            <TextView
+                android:id="@+id/tv_upload_sign"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/upload_signature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_pincode" />
+
+            <TextView
+                android:id="@+id/tv_upload_signature"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableStart="@drawable/ic_upload"
+                android:drawablePadding="@dimen/_10sdp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                android:hint="@string/upload_signature"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_upload_sign" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/Theme.Button"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:text="@string/submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_upload_signature"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/edit_bg_white_red.xml" value="0.136" />
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/edit_text_selected_green.xml" value="0.1" />
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/edit_text_selected_red.xml" value="0.1" />
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/et_bg_white_grey_line.xml" value="0.1" />
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/ic_search.xml" value="0.143" />
+        <entry key="..\:/IntellComm/app/src/main/res/drawable/ic_upload.xml" value="0.126" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/activity_account_module.xml" value="0.20416666666666666" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/activity_clients.xml" value="0.22395833333333334" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/activity_common_module.xml" value="0.25" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/activity_pre_home.xml" value="0.15555555555555556" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/adapter_allergy_list.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/adapter_client_details.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/adapter_notes.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/adapter_notes_list.xml" value="0.22" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/adapter_vaccination_list.xml" value="0.25" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_allergy.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_change_paasword.xml" value="0.22395833333333334" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_change_password.xml" value="0.22395833333333334" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_clients_add.xml" value="0.22395833333333334" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_clients_details.xml" value="0.2" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_clients_details_list.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_edit_profile.xml" value="0.22" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_notes.xml" value="0.25" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_notifications.xml" value="0.203125" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_reset_password.xml" value="0.22395833333333334" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_security_pin.xml" value="0.22" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_vaccination.xml" value="0.19947916666666668" />
+        <entry key="..\:/IntellComm/app/src/main/res/layout/fragment_verification_code.xml" value="0.203125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

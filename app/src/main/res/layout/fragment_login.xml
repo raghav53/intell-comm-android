@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.preHomeViews.login.LoginFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="check"
+            type="boolean" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.preHomeViews.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_card_green_light_green_light"
+        android:elevation="@dimen/_2sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewSemiBold22"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:text="@string/login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextViewRegular10"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:text="@string/please_sign_in_continue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/TextViewRegular12"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/EditViewMedium"
+            android:layout_width="0dp"
+            android:drawableEnd="@drawable/ic_user_email"
+            android:drawablePadding="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp"
+            android:hint="@string/enter_your_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            app:editTextChange="@{vm.editTextValue}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/TextViewRegular12"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/EditViewMedium"
+            android:layout_width="0dp"
+            android:drawableEnd="@drawable/ic_password"
+            android:drawablePadding="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp"
+            android:hint="@string/enter_your_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:editTextChange="@{vm.editTextValue}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_me"
+            android:textColor="@color/black_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_forgot_password"
+            style="@style/Theme.Button.Text"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:text="@string/forgot_your_password"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_remember"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cb_remember" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            style="@style/Theme.Button"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_remember"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="cb_remember, btn_login" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility='@{check?View.VISIBLE:View.GONE}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

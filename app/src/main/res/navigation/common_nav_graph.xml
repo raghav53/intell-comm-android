@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_nav_group"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.intell.comm.views.commonModules.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment2"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.intell.comm.views.commonModules.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+   <fragment
+        android:id="@+id/securityPinFragment"
+        android:name="com.intell.comm.views.commonModules.security_pin.SecurityPinFragment"
+        android:label="fragment_security_pin"
+        tools:layout="@layout/fragment_security_pin" />
+
+ <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.intell.comm.views.commonModules.change_password.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+
+
+</navigation>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.homeViews.home.HomeFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="check"
+            type="boolean" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.homeViews.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/intro_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewRegular18"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="@string/welcome"
+            android:textColor="@color/welcome_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextViewSemiBold18"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_minus5sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/welcome_dot_selected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            app:dotsColor="@color/theme_btn_bg"
+            app:dotsCornerRadius="@dimen/_3sdp"
+            app:dotsSize="@dimen/_6sdp"
+            app:dotsSpacing="@dimen/_2sdp"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager"
+            app:progressMode="false"
+            app:selectedDotColor="@color/welcome_dot_selected" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/TextViewRegular12"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:text="@string/categories"
+            android:textColor="@color/welcome_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            app:spanCount="3" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility='@{check?View.VISIBLE:View.GONE}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

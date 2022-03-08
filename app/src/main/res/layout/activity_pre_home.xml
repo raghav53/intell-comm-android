@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.preHomeViews.PreHomeActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="is_toolbar_back"
+            type="boolean" />
+
+        <variable
+            name="is_toolbar_title"
+            type="boolean" />
+
+        <variable
+            name="toolbar_title"
+            type="String" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.preHomeViews.PreHomeViewModel" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_pre_home_bg"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_half"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_top"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/this_is_logo"
+                    android:src="@drawable/logo_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/nav_host_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:defaultNavHost="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_top"
+                    app:navGraph="@navigation/pre_home_nav_graph" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewRegular18"
+            android:background="@color/theme_btn_bg"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@{toolbar_title, default = Toolbar_Title}"
+            android:textColor="@color/white"
+            android:visibility='@{is_toolbar_title?View.VISIBLE:View.GONE}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/theme_btn_bg"
+            android:contentDescription="@string/click_back_button"
+            android:onClick="@{(v)->vm.onBackClick()}"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:visibility='@{is_toolbar_back?View.VISIBLE:View.GONE}'
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/fl_no_internet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparent_20"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                app:drawableStartCompat="@drawable/ic_outline_info_24" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

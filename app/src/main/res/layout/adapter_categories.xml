@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.intell.comm.base.model.BaseModel" />
+
+        <variable
+            name="callback"
+            type="com.intell.comm.base.views.adapter.OnItemClickListener" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edit_bg_white_white"
+        android:elevation="@dimen/_3sdp"
+        android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/iv_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/category_image"
+            android:paddingVertical="@dimen/_10sdp"
+            android:scaleType="center"
+            android:src="@drawable/ic_client"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@{model.string1, default=Client}"
+            android:textColor="@color/welcome_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_category" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

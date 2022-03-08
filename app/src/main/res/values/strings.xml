@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">Intell Comm</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="login">Login</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="enter_your_confirm_password">Enter your confirm password</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="title">Enter title name</string>
+    <string name="resend_code">Resend code</string>
+    <string name="resend_otp">Resend OTP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="dot_of_pages">dot of pages</string>
+    <string name="next">Next</string>
+    <string name="click_back_button">Click Back Button</string>
+    <string name="please_sign_in_continue">Please sign in continue</string>
+    <string name="your_password">Your Password</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="this_is_logo">This is logo</string>
+    <string name="your_email">Your Email</string>
+    <string name="please_enter_your_email">Please Enter Your Email</string>
+    <string name="please_enter_your_valid_email">Please Enter Your Valid Email</string>
+    <string name="please_enter_your_password">Please Enter Your Password</string>
+    <string name="please_enter_your_confirm_password">Please Enter Your Confirm Password</string>
+    <string name="what_s_your_email_address">What’s your\nemail address?</string>
+    <string name="confirm_your_email_and_we_ll_send_the_instructions">Confirm your email and we’ll send the instructions.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="intell">Intell</string>
+    <string name="comm">Comm</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="otp">OTP</string>
+    <string name="_0">0</string>
+    <string name="password_not_match">Password not match.</string>
+    <string name="welcome">Welcome</string>
+    <string name="message">Message</string>
+    <string name="categories">Categories</string>
+    <string name="category_image">Category image</string>
+    <string name="clients">Clients</string>
+    <string name="add_client">Add Client</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="enter_dob">Enter DOB</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="state_">State :</string>
+    <string name="select_state">Select State</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="city">City</string>
+    <string name="select_city">Select City</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="select_postal_code">Select Postal Code</string>
+    <string name="category">Category</string>
+    <string name="select_category">Select Category</string>
+    <string name="doctor_category">Doctor Category</string>
+    <string name="select_doctor_category">Select Doctor Category</string>
+    <string name="submit">Submit</string>
+    <string name="name_">"Name :"</string>
+    <string name="registration_no_">Registration No :</string>
+    <string name="d_o_b_">D.O.B. :</string>
+    <string name="age_">Age :</string>
+    <string name="client_details">Client Details</string>
+    <string name="edit">Edit</string>
+    <string name="registration_id">Registration ID</string>
+    <string name="registration_id_">Registration ID :</string>
+    <string name="email_">Email :</string>
+    <string name="category_">Category :</string>
+    <string name="doctor_category_">Doctor Category :</string>
+    <string name="country_">Country :</string>
+    <string name="city_">City :</string>
+    <string name="phone_number_">Phone Number :</string>
+    <string name="practitioner_">Practitioner :</string>
+    <string name="client_detail">Client Detail</string>
+    <string name="disease_register">Disease Register</string>
+    <string name="allergy">Allergy</string>
+    <string name="notes">Notes</string>
+    <string name="vaccination">Vaccination</string>
+    <string name="encounter_history">Encounter History</string>
+    <string name="appointments">Appointments</string>
+    <string name="vitals">Vitals</string>
+    <string name="medication">Medication</string>
+    <string name="files">Files</string>
+    <string name="other_party">Other Party</string>
+    <string name="referral">Referral</string>
+    <string name="account">Account</string>
+    <string name="select_country">Select Country</string>
+    <string name="country_code">Country Code</string>
+    <string name="update">Update</string>
+    <string name="edit_client_details">Edit Client Details</string>
+    <string name="disease_icon">Disease Icon</string>
+    <string name="disease_register_details">Disease Register Details</string>
+    <string name="eye_redness_and_pain">Eye Redness And Pain</string>
+    <string name="add_allergy">Add Allergy</string>
+
+
+    <string-array name="CountryList">
+        <item>India</item>
+        <item>U K</item>
+        <item>Japan</item>
+        <item>Iron</item>
+        <item>US</item>
+        <item>China</item>
+        <item>Mexico</item>
+    </string-array>
+
+    <string-array name="StateList">
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Chandigarh</item>
+        <item>Hyderabad</item>
+        <item>Telangana</item>
+        <item>Odisha</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="full_name">Full Name</string>
+    <string name="pincode">Pincode</string>
+    <string name="name">Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile">Profile</string>
+    <string name="enter_name">Name</string>
+    <string name="area_code">Area Code</string>
+    <string name="upload_signature">Upload Signature</string>
+    <string name="change_password">Change Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="stars">*******</string>
+    <string name="current_password">Current Password</string>
+    <string name="security_pin">Security Pin</string>
+    <string name="update_security_pin">Update Security Pin</string>
+    <string name="note_security_pin">Note: Security pin will be used for approving medicaition for clients</string>
+    <string name="telephone_encounter">Telephone Encounter</string>
+    <string name="reason_of_encounter_">Reason Of Encounter :</string>
+    <string name="subjective_">Subjective :</string>
+    <string name="objective_">Objective :</string>
+    <string name="assessment">Assessment :</string>
+    <string name="plan_">Plan :</string>
+    <string name="diagnosis_">Diagnosis :</string>
+    <string name="created_by">Created By :</string>
+    <string name="created_date_">Created Date</string>
+</resources>

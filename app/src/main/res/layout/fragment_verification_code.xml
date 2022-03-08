@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.preHomeViews.verifyOtp.VerificationCodeFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="check"
+            type="boolean" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.preHomeViews.verifyOtp.VerificationCodeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/corner_card_green_light_green_light"
+        android:elevation="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_40sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_half_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewSemiBold22"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:text="OTP Screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:text="The OTP send Your email address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_otp"
+            style="@style/TextViewSemiBold12"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <TextView
+            android:id="@+id/tv_otp1"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_otp2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <TextView
+            android:id="@+id/tv_otp2"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_otp3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <TextView
+            android:id="@+id/tv_otp3"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_half_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <TextView
+            android:id="@+id/tv_otp4"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_half_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <TextView
+            android:id="@+id/tv_otp5"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_otp4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <TextView
+            android:id="@+id/tv_otp6"
+            style="@style/TextViewSemiBold12"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/edit_bg_white_red"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_30sdp"
+            android:minHeight="@dimen/_30sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_otp5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp" />
+
+        <EditText
+            android:id="@+id/et_otp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            android:cursorVisible="false"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/transparent"
+            app:editTextChangeNoBg="@{vm.editTextValue}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_otp1"
+            app:layout_constraintEnd_toEndOf="@+id/tv_otp6"
+            app:layout_constraintStart_toStartOf="@+id/tv_otp1"
+            app:layout_constraintTop_toTopOf="@+id/tv_otp1" />
+
+        <TextView
+            android:id="@+id/tv_otp_desc"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp1" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_verify_otp"
+            style="@style/Theme.Button"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:text="@string/verify_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_otp_desc"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_resend_otp"
+            style="@style/Theme.Button"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/transparent"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:text="@string/resend_otp"
+            android:textColor="@color/welcome_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_verify_otp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

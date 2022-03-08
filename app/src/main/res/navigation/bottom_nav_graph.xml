@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.intell.comm.views.homeViews.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.intell.comm.views.homeViews.messageInbox.MessageInboxFragment"
+        android:label="@string/message"
+        tools:layout="@layout/fragment_message_inbox" >
+
+        <action
+            android:id="@+id/action_navigation_message_to_navigation_chat4"
+            app:destination="@id/navigation_chat"/>
+
+    </fragment>
+
+ <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.intell.comm.views.homeViews.messageInbox.ChatFragment"
+        android:label="@string/message"
+        tools:layout="@layout/fragment_message_inbox"
+     >
+     <argument
+         android:name="client_id"
+         app:argType="integer" />
+ </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.intell.comm.views.homeViews.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.intell.comm.views.homeViews.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" />
+
+</navigation>

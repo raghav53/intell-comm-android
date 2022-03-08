@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.commonModules.profile.ProfileViewModel" />
+    </data>
+
+
+        <LinearLayout
+            android:paddingBottom="@dimen/_10sdp"
+            android:background="@color/intro_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="top|center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_category"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/dummy_user" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/TextViewMedium12"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Jackson Boy" />
+
+                <TextView
+                    android:id="@+id/tv_job"
+                    style="@style/TextViewMedium10"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Staff"
+                    android:textColor="@color/black_medium" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/registration_id"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="AUEM2401042449" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="Jackson Boy" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/email"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="jacksonboy@gmail.com" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/date_of_birth"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="01/01/1996" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="+43-89-893343" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/country"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="Austria" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/state"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="Steiermark"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/city"
+                    android:textColor="@color/black_medium" />
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:maxWidth="@dimen/_180sdp"
+                    android:singleLine="true"
+                    android:text="Steiermark" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:text="@string/pincode"
+                    android:textColor="@color/black_medium" />
+
+            <TextView
+                style="@style/TextViewRegular10"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:maxWidth="@dimen/_180sdp"
+                android:singleLine="true"
+                android:text="54327" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".2"
+                android:background="@color/black" />
+        </LinearLayout>
+ </layout>

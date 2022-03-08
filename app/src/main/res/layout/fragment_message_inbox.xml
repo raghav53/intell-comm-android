@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.homeViews.messageInbox.MessageInboxFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="check"
+            type="boolean" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.homeViews.messageInbox.MessageInboxViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_btn_bg">
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/EditViewMedium"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            app:editTextChangeNoBg="@{vm.editTextValue}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_message"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:background="@color/intro_bg"
+            android:fillViewport="true"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

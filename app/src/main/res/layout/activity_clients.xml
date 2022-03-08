@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.clientsModule.ClientsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="is_toolbar_back"
+            type="boolean" />
+
+        <variable
+            name="is_toolbar_title"
+            type="boolean" />
+
+        <variable
+            name="toolbar_title"
+            type="String" />
+
+        <variable
+            name="is_add_icon"
+            type="boolean" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.clientsModule.ClientsViewModel" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_btn_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewRegular18"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@{toolbar_title, default = Toolbar_Title}"
+            android:visibility='@{is_toolbar_title?View.VISIBLE:View.GONE}'
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/click_back_button"
+            android:onClick="@{(v)->vm.onBackClick()}"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+            android:visibility='@{is_toolbar_back?View.VISIBLE:View.GONE}'
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/click_back_button"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:visibility='@{is_add_icon?View.VISIBLE:View.GONE}'
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_plus_white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/clients_nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/clients_nav_graph" />
+
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/fl_no_internet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparent_20"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                app:drawableStartCompat="@drawable/ic_outline_info_24" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

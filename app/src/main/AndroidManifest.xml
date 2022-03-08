@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.intell.comm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".base.di.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IntellComm">
+        <activity
+            android:name=".views.commonModules.CommonModuleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.clientsModule.ClientsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.LauncherActivity"
+            android:theme="@style/Theme.Home"></activity>
+        <activity android:name=".views.preHomeViews.welcome.WelcomeActivity" />
+        <activity
+            android:name=".views.preHomeViews.PreHomeActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".views.homeViews.HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
