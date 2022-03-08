@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_minus8sdp"
+            android:layout_marginTop="@dimen/_minus10sdp"
             android:layout_marginBottom="@dimen/_10sdp">
 
             <EditText
@@ -60,35 +60,22 @@
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_8sdp"
                     android:src="@drawable/filter" />
             </RelativeLayout>
         </RelativeLayout>
 
-        <TextView
-            style="@style/TextViewSemiBold14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/edit_bg_white_white"
-            android:elevation="@dimen/_5sdp"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:paddingVertical="@dimen/_10sdp"
-            android:text="@string/telephone_encounter"
-            app:drawableEndCompat="@drawable/ic_baseline_add_24"
-            app:drawableTint="@color/black" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:fillViewport="true"
+             android:fillViewport="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_marginHorizontal="@dimen/_12sdp"
-            android:paddingTop="@dimen/_20sdp"
-            android:paddingBottom="@dimen/_10sdp" />
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp" />
 
     </LinearLayout>
 </layout>

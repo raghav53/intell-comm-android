@@ -11,6 +11,8 @@ class BaseModel(
     var string4: String = "",
     var string5: String = "",
     var string6: String = "",
+    var string7: String = "",
+    var string8: String = "",
     var int1: Int = -1,
     var int2: Int = -1,
     var type: Int = 0,

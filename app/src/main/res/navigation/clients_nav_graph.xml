@@ -195,6 +195,28 @@
         <argument
             android:name="toolbar_title"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_referral_to_editReferral"
+            app:destination="@id/editReferral" />
+        <action
+            android:id="@+id/action_referral_to_replyReferralFragment"
+            app:destination="@id/replyReferralFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editReferral"
+        android:name="com.intell.comm.views.clientsModule.referral.EditReferralFragment"
+        tools:layout="@layout/fragment_edit_referral">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/replyReferralFragment"
+        android:name="com.intell.comm.views.clientsModule.referral.ReferralReplyFragment"
+        tools:layout="@layout/fragment_referral_reply">
+        <argument
+            android:name="toolbar_title"
+            app:argType="integer" />
     </fragment>
 
     <fragment

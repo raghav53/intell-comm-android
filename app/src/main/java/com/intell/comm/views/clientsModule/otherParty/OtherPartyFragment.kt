@@ -4,6 +4,7 @@ import androidx.navigation.fragment.navArgs
 import com.intell.comm.R
 import com.intell.comm.base.views.BaseFragment
 import com.intell.comm.databinding.FragmentOtherPartyBinding
+import com.intell.comm.utils.checkIsEmpty
 import com.intell.comm.views.clientsModule.ClientsActivity
 
 class OtherPartyFragment : BaseFragment<FragmentOtherPartyBinding, OtherPartyViewModel>(
@@ -20,6 +21,16 @@ class OtherPartyFragment : BaseFragment<FragmentOtherPartyBinding, OtherPartyVie
             true,
             args.toolbarTitle
         )
+
+        viewModel.baseClick.observe(viewLifecycleOwner) { view ->
+            when (view?.id ?: 0) {
+                R.id.btn_update -> {
+                    requireActivity().onBackPressed()
+                }
+            }
+        }
     }
+
+
 
 }

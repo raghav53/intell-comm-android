@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".views.commonModules.profile.EditProfileFragment">
+    tools:context=".views.clientsModule.referral.EditReferralFragment">
 
     <data>
 
@@ -22,9 +22,10 @@
 
         <variable
             name="vm"
-            type="com.intell.comm.views.commonModules.profile.EditProfileViewModel" />
+            type="com.intell.comm.views.clientsModule.referral.ReferralViewModel" />
 
     </data>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,18 +53,20 @@
                 style="@style/TextViewRegular12"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/name"
+                android:text="@string/speciality"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/et_name"
+                android:id="@+id/et_speciality"
                 style="@style/EditViewMedium"
                 android:layout_width="0dp"
+                android:clickable="true"
                 android:elevation="@dimen/_2sdp"
-                android:hint="@string/enter_name"
+                android:focusable="false"
+                android:hint="@string/family_physicians"
                 android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
                 app:editTextChange="@{vm.editTextValue}"
                 app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,228 +74,295 @@
 
 
             <TextView
-                android:id="@+id/tv_dob"
+                android:id="@+id/tv_consult"
                 style="@style/TextViewRegular12"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/date_of_birth"
+                android:text="@string/consultant"
                 app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/et_dob"
+                android:id="@+id/et_consultant"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/consultant"
+                android:importantForAutofill="no"
+                android:clickable="true"
+                android:focusable="false"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_consult" />
+
+
+            <TextView
+                android:id="@+id/tv_ph"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_speciality" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="+9199999999"
+                android:singleLine="true"
+                 android:maxLength="12"
+                android:importantForAutofill="no"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ph" />
+
+            <TextView
+                android:id="@+id/tv_f"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/fax"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/et_consultant" />
+
+            <EditText
+                android:id="@+id/et_fax"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="1234"
+                android:clickable="true"
+
+                android:importantForAutofill="no"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_f" />
+
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+            <EditText
+                android:id="@+id/et_address"
                 style="@style/EditViewMedium"
                 android:layout_width="0dp"
                 android:clickable="true"
                 android:elevation="@dimen/_2sdp"
                 android:focusable="false"
-                android:hint="@string/enter_dob"
-                android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
-                android:onClick="@{(v)->vm.onClick(v)}"
-                app:editTextChange="@{vm.editTextValue}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/tv_dob" />
-
-
-            <TextView
-                android:id="@+id/tv_country"
-                style="@style/TextViewRegular12"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/country"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_name" />
-
-            <EditText
-                android:id="@+id/et_country"
-                style="@style/EditViewMedium"
-                android:layout_width="0dp"
-                android:drawableEnd="@drawable/ic_down_arrow"
-                android:elevation="@dimen/_2sdp"
-                android:focusable="false"
-                android:hint="@string/country"
-                android:importantForAutofill="no"
-                app:editTextChange="@{vm.editTextValue}"
-                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_country" />
-
-            <TextView
-                android:id="@+id/tv_state"
-                style="@style/TextViewRegular12"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/state"
-                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/et_dob" />
-
-            <EditText
-                android:id="@+id/et_state"
-                style="@style/EditViewMedium"
-                android:layout_width="0dp"
-                android:drawableEnd="@drawable/ic_down_arrow"
-                android:elevation="@dimen/_2sdp"
-                android:focusable="false"
-                android:hint="@string/state"
-                android:importantForAutofill="no"
-                app:editTextChange="@{vm.editTextValue}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/tv_state" />
-
-
-            <TextView
-                android:id="@+id/tv_city"
-                style="@style/TextViewRegular12"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/city"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_country" />
-
-            <EditText
-                android:id="@+id/et_city"
-                style="@style/EditViewMedium"
-                android:layout_width="0dp"
-                android:drawableEnd="@drawable/ic_down_arrow"
-                android:elevation="@dimen/_2sdp"
-                android:focusable="false"
                 android:hint="@string/city"
                 android:importantForAutofill="no"
-                android:inputType="phone"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
                 app:editTextChange="@{vm.editTextValue}"
                 app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+                app:layout_constraintTop_toBottomOf="@+id/address" />
 
             <TextView
-                android:id="@+id/tv_country_code"
+                android:id="@+id/urgency"
                 style="@style/TextViewRegular12"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/country_code"
+                android:text="@string/urgency"
                 app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/et_state" />
+                app:layout_constraintTop_toBottomOf="@+id/et_fax" />
 
 
             <EditText
-                android:id="@+id/et_country_code"
+                android:id="@+id/et_urgency"
                 style="@style/EditViewMedium"
                 android:layout_width="0dp"
+                android:clickable="true"
                 android:elevation="@dimen/_2sdp"
-                android:hint="@string/country_code"
+                android:focusable="false"
+                android:hint="@string/urgent"
                 android:importantForAutofill="no"
                 android:onClick="@{(v)->vm.onClick(v)}"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.166"
                 app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/tv_country_code" />
+                app:layout_constraintTop_toBottomOf="@+id/urgency" />
 
             <TextView
-                android:id="@+id/tv_area_code"
+                android:id="@+id/attach_file"
                 style="@style/TextViewRegular12"
+                android:layout_width="match_parent"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/area_code"
+                android:text="@string/attach_from_system_files"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_city" />
+                app:layout_constraintTop_toBottomOf="@+id/et_address" />
 
             <EditText
-                android:id="@+id/et_area_code"
+                android:id="@+id/et_attach_file"
                 style="@style/EditViewMedium"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
+                android:clickable="true"
                 android:elevation="@dimen/_2sdp"
-                android:hint="@string/area_code"
+                android:focusable="false"
+                android:hint="@string/select_attach_from_system_files"
                 android:importantForAutofill="no"
-                android:inputType="phone"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
                 app:editTextChange="@{vm.editTextValue}"
                 app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_area_code" />
+                app:layout_constraintTop_toBottomOf="@+id/attach_file" />
 
 
             <TextView
-                android:id="@+id/tv_phone_number"
+                android:id="@+id/instructions"
                 style="@style/TextViewRegular12"
-
+                android:layout_width="match_parent"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/phone_number"
-                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/et_country_code" />
-
-            <EditText
-                android:id="@+id/et_phone_no"
-                style="@style/EditViewMedium"
-                android:layout_width="0dp"
-                android:elevation="@dimen/_2sdp"
-                android:hint="@string/phone_number"
-                android:importantForAutofill="no"
-                android:inputType="phone"
-                app:editTextChange="@{vm.editTextValue}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
-
-
-            <TextView
-                android:id="@+id/tv_pincode"
-                style="@style/TextViewRegular12"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/pincode"
+                android:text="@string/referrer_instruction"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_area_code" />
+                app:layout_constraintTop_toBottomOf="@+id/et_attach_file" />
 
             <EditText
-                android:id="@+id/et_pincode"
+                android:id="@+id/et_referr_instructions"
                 style="@style/EditViewMedium"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:elevation="@dimen/_2sdp"
-                android:hint="@string/pincode"
+                android:hint="Can You See This Patient Please"
                 android:importantForAutofill="no"
-                android:inputType="phone"
+
+                android:maxHeight="@dimen/_150sdp"
+
                 app:editTextChange="@{vm.editTextValue}"
                 app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_pincode" />
+                app:layout_constraintTop_toBottomOf="@+id/instructions" />
 
 
             <TextView
-                android:id="@+id/tv_upload_sign"
+                android:id="@+id/upload_file"
                 style="@style/TextViewRegular12"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/upload_signature"
+                android:text="@string/upload_file"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_pincode" />
+                app:layout_constraintTop_toBottomOf="@+id/et_referr_instructions" />
 
-            <TextView
-                android:id="@+id/tv_upload_signature"
+            <EditText
+                android:id="@+id/et_upload_file"
                 style="@style/EditViewMedium"
                 android:layout_width="0dp"
+                android:clickable="true"
                 android:drawableStart="@drawable/ic_upload"
                 android:drawablePadding="@dimen/_10sdp"
                 android:elevation="@dimen/_2sdp"
+                android:focusable="false"
                 android:gravity="center_vertical"
-                android:hint="@string/upload_signature"
+                android:hint="@string/upload_images"
                 android:importantForAutofill="no"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_upload_sign" />
+                app:layout_constraintTop_toBottomOf="@+id/upload_file" />
 
+            <TextView
+                android:id="@+id/tv_clinic_info"
+                style="@style/TextViewRegular12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/clinical_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_upload_file"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_clinic_info"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acute" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:text="@string/acute_and_needed" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/long_term_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/long_term_medication" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:text="@string/major_diseases" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minor_diseases" />
+
+                </LinearLayout>
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_submit"
                 style="@style/Theme.Button"
                 android:layout_marginVertical="@dimen/_20sdp"
                 android:onClick="@{(v)->vm.onClick(v)}"
-                android:text="@string/submit"
+                android:text="@string/save"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_upload_signature"
+                app:layout_constraintTop_toBottomOf="@+id/ll_info"
                 tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
 

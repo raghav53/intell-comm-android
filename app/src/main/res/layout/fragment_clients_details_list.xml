@@ -21,6 +21,7 @@
         android:padding="@dimen/_10sdp"
         android:background="@color/intro_bg">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/top_card"
             android:layout_width="match_parent"
@@ -109,6 +110,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_clients"
+            android:nestedScrollingEnabled="false"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_10sdp"

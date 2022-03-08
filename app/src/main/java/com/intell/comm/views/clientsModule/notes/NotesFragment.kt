@@ -80,182 +80,242 @@ class NotesFragment : BaseFragment<FragmentNotesBinding, NotesViewModel>(
         val list = ArrayList<BaseModel>()
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         list.add(
             BaseModel(
-                string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
-                string3 = "08/01/2021",
-                string4 = "Least Severity",
-                string5 = "Jackson Bay"
+                string1 = "Test",
+                string2 = "Test",
+                string3 = "Test",
+                string4 = "Test",
+                string5 = "Test",
+                string6 = "Acute gastroenteropathy",
+                string7 = "Testing Business",
+                string8 = "Tue, Jan 25,2022 12:55 PM"
             )
         )
         return list

@@ -1,8 +1,14 @@
 package com.intell.comm.views.clientsModule.vitals
 
+import android.view.View
 import androidx.navigation.fragment.navArgs
+import com.intell.comm.BR
 import com.intell.comm.R
+import com.intell.comm.base.model.BaseModel
 import com.intell.comm.base.views.BaseFragment
+import com.intell.comm.base.views.adapter.BaseRecyclerViewAdapter
+import com.intell.comm.base.views.adapter.OnItemClickListener
+import com.intell.comm.databinding.AdapterAllergyListBinding
 import com.intell.comm.databinding.FragmentVitalsBinding
 import com.intell.comm.views.clientsModule.ClientsActivity
 
@@ -20,6 +26,138 @@ class VitalsFragment : BaseFragment<FragmentVitalsBinding, VitalsViewModel>(
             true,
             args.toolbarTitle
         )
+
+        setClientsList()
     }
+
+    private fun setClientsList() {
+        val clientListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterAllergyListBinding>(
+            R.layout.adapter_vitals_list,
+            BR.model,
+            object : OnItemClickListener<BaseModel> {
+                override fun onItemClick(v: View?, m: BaseModel, position: Int) {
+                }
+            },
+            isPosition = true
+        )
+
+        binding.rvVitals.adapter = clientListAdapter
+        clientListAdapter.updateList(getSwipeList())
+    }
+
+    private fun getSwipeList(): List<BaseModel> {
+        val list = ArrayList<BaseModel>()
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+        list.add(
+            BaseModel(
+                string1 = "190/80",
+                string2 = "Regular",
+                string3 = "170cm",
+                string4 = "70kg",
+                string5 = "Sun, Jan 16, 2022 10:30 PM"
+            )
+        )
+
+        return list
+    }
+
 
 }

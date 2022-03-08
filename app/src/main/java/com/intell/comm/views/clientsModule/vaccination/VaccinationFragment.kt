@@ -77,7 +77,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Covid-Shield",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -87,7 +87,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "COVAX",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -97,7 +97,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Coronill",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -107,7 +107,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "COVOVAX",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -117,7 +117,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Corbevax",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -127,7 +127,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Moderna",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -137,7 +137,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Sputnik V",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -147,7 +147,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Ad26.COV2.S",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -157,7 +157,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Vaxzevria",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -167,7 +167,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Covishield",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -177,7 +177,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Covaxin",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -187,7 +187,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Corbevax",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -197,7 +197,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Nuvaxovid",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -207,7 +207,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "AKS-452",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -217,7 +217,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -227,7 +227,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -237,7 +237,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -247,7 +247,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -257,7 +257,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",
@@ -267,7 +267,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
         list.add(
             BaseModel(
                 string1 = "Amoxil Chewable",
-                string2 = "13/12/21",
+                string2 = "13/12/2022",
                 string3 = "2927 Taylor Street, New York",
                 string4 = "13/12/22",
                 string5 = "23/12/22",

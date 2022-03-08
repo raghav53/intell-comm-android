@@ -9,11 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_20">#CCFFFFFF</color>
     <color name="transparent_20">#33000000</color>
-    <color name="transparent">#00000000</color>
+     <color name="transparent">#00000000</color>
     <color name="middle_trans">#6FFF602E</color>
     <color name="yellow_light">#FFC54D</color>
     <color name="text_validation_error">#F68484</color>
     <color name="red">#FFFF0000</color>
+    <color name="dark_orange">#FF891F</color>
+    <color name="dark_red">#FF1A00</color>
+    <color name="green_light">#BBBB37</color>
 
     <color name="intro_bg">#F5FAFB</color>
     <color name="black_medium">#FF606175</color>
@@ -29,5 +32,6 @@
     <color name="list_small_text_color">#4A4A4A</color>
     <color name="add_client_hint_color">#C9C9C9</color>
     <color name="client_detail_hint_color">#808080</color>
+    <color name="bottom_dialog_bg">#F5FAFB</color>
 
 </resources>

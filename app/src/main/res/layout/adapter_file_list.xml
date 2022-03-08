@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.intell.comm.base.model.BaseModel" />
+
+        <variable
+            name="callback"
+            type="com.intell.comm.base.views.adapter.OnItemClickListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_7sdp"
+        android:elevation="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="@{(v)->callback.onItemClick(v,model, position)}">
+
+            <ImageView
+                android:id="@+id/iv_category"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:backgroundTint="@color/theme_btn_bg"
+                 android:background="@drawable/edit_bg_white_white"
+                android:contentDescription="@string/disease_icon"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_8sdp"
+                app:setDrawableImage="@{model.int1}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewMedium12"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{model.string1, default=Name}"
+                app:layout_constraintStart_toEndOf="@+id/iv_category"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                style="@style/TextViewMedium12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/_5sdp"
+                android:maxLines="1"
+                android:text="@{model.string2, default=20}"
+                android:textColor="@color/list_small_text_color"
+                app:layout_constraintStart_toEndOf="@+id/iv_category"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="270"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

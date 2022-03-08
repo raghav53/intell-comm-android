@@ -37,7 +37,7 @@
             android:layout_width="0dp"
             android:layout_marginTop="@dimen/_5sdp"
             android:ellipsize="end"
-            android:maxLines="1"
+             android:maxLines="1"
             android:text="@{model.string1, default=Covid}"
             android:textColor="@color/btn_text_color"
             app:layout_constraintEnd_toStartOf="@+id/tv_date"
@@ -56,13 +56,15 @@
         <TextView
             android:id="@+id/tv_address"
             style="@style/TextViewRegular10"
+            android:layout_marginTop="@dimen/_3sdp"
             android:ellipsize="end"
-             android:maxLines="1"
-            android:text="@{model.string2, default=Street}"
+            android:maxLines="1"
+            android:gravity="bottom"
+            android:drawableStart="@drawable/address_pin"
+            android:text="@{model.string3, default=Street}"
             android:textColor="@color/list_small_text_color"
-            app:layout_constraintBaseline_toBottomOf="@id/tv_name"
-             app:layout_constraintBottom_toBottomOf="@id/tv_name"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
 
         <TextView
@@ -71,7 +73,7 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text='@{"Diagnosed : "+model.string3, default=Diagnosed}'
+            android:text='@{"Done Date : "+model.string4, default=Diagnosed}'
             android:textColor="@color/list_small_text_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_address" />
@@ -84,7 +86,7 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text='@{"Severity : "+model.string4, default=Diagnosed}'
+            android:text='@{"Due Date : "+model.string5, default=Diagnosed}'
             android:textColor="@color/list_small_text_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_email"
@@ -97,7 +99,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:paddingBottom="@dimen/_5sdp"
-            android:text='@{"Reaction/Symptom : "+model.string5, default=clientId}'
+            android:text='@{"Responsible Provider : "+model.string6, default=clientId}'
             android:textColor="@color/list_small_text_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_email" />
