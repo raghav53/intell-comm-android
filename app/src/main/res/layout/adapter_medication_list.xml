@@ -362,23 +362,29 @@
                 android:textColor="@color/white" />
 
             <TextView
+                android:id="@+id/tv_edit_medication"
                 android:elevation="@dimen/_3sdp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 style="@style/TextViewRegular8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
                 android:layout_marginHorizontal="@dimen/_3sdp"
                 android:background="@drawable/btn_green_green"
                 android:backgroundTint="@color/dark_orange"
                 android:gravity="center"
-                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_15sdp"
                 android:paddingVertical="@dimen/_3sdp"
                 android:text="@string/rerx"
                 android:textColor="@color/white" />
 
             <TextView
+                android:id="@+id/tv_delete_medication"
                 android:elevation="@dimen/_3sdp"
                 style="@style/TextViewRegular8"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_width="wrap_content"
+                android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_3sdp"
                 android:background="@drawable/btn_green_green"

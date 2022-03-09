@@ -78,9 +78,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:rotation="270"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/drop_down"
+                android:src="@drawable/ic_arrow_next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

@@ -1,6 +1,7 @@
 package com.intell.comm.views.clientsModule.vitals
 
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.intell.comm.BR
 import com.intell.comm.R
@@ -11,6 +12,9 @@ import com.intell.comm.base.views.adapter.OnItemClickListener
 import com.intell.comm.databinding.AdapterAllergyListBinding
 import com.intell.comm.databinding.FragmentVitalsBinding
 import com.intell.comm.views.clientsModule.ClientsActivity
+import com.intell.comm.views.clientsModule.clientsList.ClientsListFragmentDirections
+import com.intell.comm.views.clientsModule.referral.ReferralFragmentDirections
+import java.lang.NullPointerException
 
 class VitalsFragment : BaseFragment<FragmentVitalsBinding, VitalsViewModel>(
     R.layout.fragment_vitals,
@@ -36,6 +40,12 @@ class VitalsFragment : BaseFragment<FragmentVitalsBinding, VitalsViewModel>(
             BR.model,
             object : OnItemClickListener<BaseModel> {
                 override fun onItemClick(v: View?, m: BaseModel, position: Int) {
+                    when (v?.id) {
+                        R.id.iv_edit_vital -> {
+                            navigateToEditVitals(m.id)
+                        }
+                    }
+
                 }
             },
             isPosition = true
@@ -44,7 +54,11 @@ class VitalsFragment : BaseFragment<FragmentVitalsBinding, VitalsViewModel>(
         binding.rvVitals.adapter = clientListAdapter
         clientListAdapter.updateList(getSwipeList())
     }
-
+    private fun navigateToEditVitals(clientId:Int) {
+        val direction =
+            VitalsFragmentDirections.actionVitalsToEditVitals(clientId = clientId)
+        findNavController().navigate(direction)
+    }
     private fun getSwipeList(): List<BaseModel> {
         val list = ArrayList<BaseModel>()
         list.add(

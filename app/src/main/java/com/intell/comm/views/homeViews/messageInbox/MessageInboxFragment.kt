@@ -11,6 +11,7 @@ import com.intell.comm.base.views.BaseFragment
 import com.intell.comm.base.views.adapter.BaseRecyclerViewAdapter
 import com.intell.comm.base.views.adapter.OnItemClickListener
 import com.intell.comm.databinding.AdapterCategoriesBinding
+import com.intell.comm.databinding.AdapterMessageListBindingImpl
 import com.intell.comm.databinding.FragmentMessageInboxBinding
 import com.intell.comm.views.clientsModule.clientsList.ClientsListFragmentDirections
 
@@ -47,7 +48,7 @@ class MessageInboxFragment : BaseFragment<FragmentMessageInboxBinding, MessageIn
     }
 
     private fun setClientsList() {
-        val messageListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterCategoriesBinding>(
+        val messageListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterMessageListBindingImpl>(
             R.layout.adapter_message_list,
             BR.model,
             object : OnItemClickListener<BaseModel> {

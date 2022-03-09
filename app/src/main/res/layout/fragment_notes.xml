@@ -52,6 +52,7 @@
                 android:id="@+id/rl_filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{(v)->vm.onClick(v)}"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:background="@drawable/edit_bg_white_white">

@@ -27,7 +27,6 @@
         android:layout_marginVertical="@dimen/_5sdp"
         android:background="@drawable/edit_bg_white_white"
         android:elevation="@dimen/_3sdp"
-        android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
         android:paddingStart="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp">
 
@@ -92,11 +91,17 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
+                android:id="@+id/iv_edit_vital"
                 android:layout_width="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_6sdp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
                 android:src="@drawable/ic_edit" />
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

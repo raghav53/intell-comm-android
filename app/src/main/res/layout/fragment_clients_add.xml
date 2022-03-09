@@ -349,7 +349,7 @@
             </FrameLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_submit"
+                android:id="@+id/btn_save"
                 style="@style/Theme.Button"
                 android:layout_marginVertical="@dimen/_20sdp"
                 android:onClick="@{(v)->vm.onClick(v)}"

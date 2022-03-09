@@ -132,6 +132,14 @@
         <argument
             android:name="toolbar_title"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_vaccination_to_addVaccination"
+            app:destination="@id/addVaccination" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVaccination"
+        android:name="com.intell.comm.views.clientsModule.vaccination.AddVaccinationFragment"
+        tools:layout="@layout/fragment_add_vaccination">
     </fragment>
 
     <fragment
@@ -159,6 +167,18 @@
         <argument
             android:name="toolbar_title"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_vitals_to_editVitals"
+            app:destination="@id/editVitals" />
+    </fragment>
+    <fragment
+        android:id="@+id/editVitals"
+        android:name="com.intell.comm.views.clientsModule.vitals.EditVitalsFragment"
+        tools:layout="@layout/fragment_vitals">
+        <argument
+            android:name="client_id"
+            app:argType="integer" />
+
     </fragment>
 
     <fragment
@@ -167,6 +187,17 @@
         tools:layout="@layout/fragment_medication">
         <argument
             android:name="toolbar_title"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_medication_to_addMedication"
+            app:destination="@id/addMedication" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedication"
+        android:name="com.intell.comm.views.clientsModule.medication.AddMedicationFragment"
+        tools:layout="@layout/fragment_add_medication">
+        <argument
+            android:name="toolbarTitle"
             app:argType="integer" />
     </fragment>
 
@@ -177,7 +208,20 @@
         <argument
             android:name="toolbar_title"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_files_to_filesDetailList"
+            app:destination="@id/filesDetailList" />
     </fragment>
+
+    <fragment
+        android:id="@+id/filesDetailList"
+        android:name="com.intell.comm.views.clientsModule.files.FileDetailFragment"
+        tools:layout="@layout/fragment_file_detail">
+        <argument
+            android:name="file_name"
+            app:argType="string" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/otherParty"

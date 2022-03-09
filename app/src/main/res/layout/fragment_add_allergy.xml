@@ -1,14 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".views.clientsModule.allergy.AddAllergyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="is_toolbar_back"
+            type="boolean" />
+
+        <variable
+            name="is_toolbar_title"
+            type="boolean" />
+
+        <variable
+            name="toolbar_title"
+            type="String" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.clientsModule.allergy.AddAllergyViewModel" />
+
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Add Allergy" />
+        android:background="@color/intro_bg"
+        android:fillViewport="true">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <View
+                android:id="@+id/v_middle_vertical"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_drug_allergy_class"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/drug_allergy_class"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_allergy_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/edit_bg_white_white"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_drug_allergy_class">
+
+                <Spinner
+                    android:id="@+id/sp_allergy_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/select_country"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_environment_allergy"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/environmental_allergy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_allergy_class" />
+
+            <EditText
+                android:id="@+id/et_environment_allergy"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_environmental_allergy"
+                android:importantForAutofill="no"
+                 app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_environment_allergy" />
+
+            <TextView
+                android:id="@+id/tv_reaction"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/reaction_symptom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_environment_allergy" />
+
+            <EditText
+                android:id="@+id/et_reaction"
+                style="@style/EditViewMedium"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_reaction_symptom"
+                android:importantForAutofill="no"
+                 app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_reaction" />
+
+
+            <TextView
+                android:id="@+id/tv_severity"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/severity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_reaction" />
+
+            <FrameLayout
+                android:id="@+id/frame_severity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/edit_bg_white_white"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_severity">
+
+                <Spinner
+                    android:id="@+id/sp_severity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/select_country"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_diagnosed"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/diagnosed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_severity" />
+
+            <FrameLayout
+                android:id="@+id/frame_diagnosed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/edit_bg_white_white"
+                android:elevation="@dimen/_2sdp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_diagnosed">
+
+                <Spinner
+                    android:id="@+id/sp_diagnosed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/select_city"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/start_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_diagnosed" />
+
+            <EditText
+                android:id="@+id/et_start_date"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:elevation="@dimen/_2sdp"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:hint="@string/select_start_date"
+                android:importantForAutofill="no"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="textEmailAddress"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_start_date" />
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/end_date"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/frame_diagnosed" />
+
+            <EditText
+                android:id="@+id/et_end_date"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/select_end_date"
+                android:importantForAutofill="no"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="textEmailAddress"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date" />
+
+            <TextView
+                android:id="@+id/tv_component_type"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/component_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_start_date" />
+            <EditText
+                android:id="@+id/et_component_type"
+                style="@style/EditViewMedium"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_componemt_type"
+                android:importantForAutofill="no"
+                 app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_component_type" />
+
+
+            <TextView
+                android:id="@+id/tv_hiv_related"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/hiv_related"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_component_type" />
+
+
+            <EditText
+                android:id="@+id/et_hiv_related"
+                style="@style/EditViewMedium"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_hiv_related"
+                android:importantForAutofill="no"
+                 app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hiv_related" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/Theme.Button"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_hiv_related"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

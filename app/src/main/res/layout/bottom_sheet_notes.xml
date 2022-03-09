@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@color/black_medium"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_radious_bottom_dialog"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <TextView
+            style="@style/TextViewSemiBold14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/filter_by"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/encounter_type"
+                    android:textColor="@color/black_medium" />
+
+                <EditText
+                    style="@style/EditViewMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_bg_white_white"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:focusable="false"
+                    android:hint="@string/select_encounter"
+                    android:padding="@dimen/_10sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/diagnosis"
+                    android:textColor="@color/black_medium" />
+
+                <EditText
+                    style="@style/EditViewMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_bg_white_white"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:focusable="false"
+                    android:hint="@string/select_diagnosis"
+                    android:padding="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/provider"
+                    android:textColor="@color/black_medium" />
+
+                <EditText
+                    style="@style/EditViewMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_bg_white_white"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:focusable="false"
+                    android:hint="@string/select_provider"
+                    android:padding="@dimen/_10sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/start_date"
+                    android:textColor="@color/black_medium" />
+
+                <EditText
+                    style="@style/EditViewMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_bg_white_white"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/select_start_date"
+                    android:padding="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewRegular10"
+
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/end_date"
+                    android:textColor="@color/black_medium" />
+
+                <EditText
+                    style="@style/EditViewMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_bg_white_white"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/select_end_date"
+                    android:padding="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_search"
+            style="@style/Theme.Button"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:onClick="@{(v)->vm.onClick(v)}"
+            android:text="@string/search" />
+    </LinearLayout>
+
+
+</RelativeLayout>

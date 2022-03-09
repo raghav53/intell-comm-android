@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.clientsModule.vitals.EditVitalsFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="is_toolbar_back"
+            type="boolean" />
+
+        <variable
+            name="is_toolbar_title"
+            type="boolean" />
+
+        <variable
+            name="toolbar_title"
+            type="String" />
+
+        <variable
+            name="vm"
+            type="com.intell.comm.views.clientsModule.vitals.EditVitalViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/intro_bg"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <View
+                android:id="@+id/v_middle_vertical"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_100sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_blood_pressure"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/blood_pressure"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_blood_pressure"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/select_bp"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_blood_pressure" />
+
+
+            <TextView
+                android:id="@+id/tv_pulse"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/pulse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_blood_pressure" />
+
+            <EditText
+                android:id="@+id/et_pulse"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/select_pulse"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pulse" />
+
+            <EditText
+                android:id="@+id/et_pulse_rate"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/rate"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pulse" />
+
+            <TextView
+                android:id="@+id/tv_rr"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/rr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_pulse" />
+
+            <EditText
+                android:id="@+id/et_rr"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/select_rr"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rr" />
+
+
+            <EditText
+                android:id="@+id/et_dob"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/rr"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rr" />
+
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_rr" />
+
+            <EditText
+                android:id="@+id/et_temperature"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/select_temperature"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_temperature" />
+
+            <EditText
+                android:id="@+id/et_temp"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/temp"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_temperature" />
+
+
+            <TextView
+                android:id="@+id/tv_oxigen"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/oxygen_saturation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_temperature" />
+
+            <EditText
+                android:id="@+id/et_oxigen"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:elevation="@dimen/_2sdp"
+                android:focusable="false"
+                android:hint="@string/select_oxygen_saturation"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_oxigen" />
+
+            <EditText
+                android:id="@+id/et_os"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/os"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_oxigen" />
+
+
+            <TextView
+                android:id="@+id/tv_head_circumference"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/head_circumference"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_os" />
+
+            <EditText
+                android:id="@+id/et_head_circumference"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_head_circumference"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_head_circumference" />
+
+            <EditText
+                android:id="@+id/et_head_cm"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/cm"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_head_circumference" />
+
+
+
+            <TextView
+                android:id="@+id/tv_waist"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/waist"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_head_circumference" />
+
+            <EditText
+                android:id="@+id/et_waist"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_waist"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_waist" />
+
+            <EditText
+                android:id="@+id/et_waist_cm"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/cm"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_waist" />
+
+
+
+  <TextView
+                android:id="@+id/tv_height"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_waist" />
+
+            <EditText
+                android:id="@+id/et_height"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_height"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_height" />
+
+            <EditText
+                android:id="@+id/et_height_cm"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/cm"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:focusable="false"
+                android:clickable="true"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_height" />
+
+
+  <TextView
+                android:id="@+id/tv_weight"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_height" />
+
+            <EditText
+                android:id="@+id/et_weight"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_weight"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toStartOf="@+id/v_middle_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
+
+            <EditText
+                android:id="@+id/et_weight_cm"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:hint="@string/cm"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:focusable="false"
+                android:clickable="true"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/v_middle_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
+
+
+
+  <TextView
+                android:id="@+id/tv_bmi"
+                style="@style/TextViewRegular12"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/bmi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_weight_cm" />
+
+            <EditText
+                android:id="@+id/et_bmi"
+                style="@style/EditViewMedium"
+                android:layout_width="0dp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/enter_bmi"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                app:editTextChange="@{vm.editTextValue}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bmi" />
+
+             <CheckBox
+                 android:id="@+id/cb_cb"
+                 android:layout_width="match_parent"
+                 style="@style/TextViewRegular10"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_height="wrap_content"
+                 android:text="@string/check_this_box_to_add_this_vital_to_your_current_note"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/et_bmi" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                style="@style/Theme.Button"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:onClick="@{(v)->vm.onClick(v)}"
+                android:text="@string/save"
+                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_cb"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

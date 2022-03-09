@@ -61,7 +61,7 @@ open class BaseViewModel : ViewModel() {
         simpleStateFlow.value = (Resource.empty(null))
     }
 
-    fun simpleApiResponsePost(url: String, map: Map<String, String>) = viewModelScope.launch {
+    private fun simpleApiResponsePost(url: String, map: Map<String, String>) = viewModelScope.launch {
         simpleStateFlow.value = Resource.loading(null)
         mainApiRepository.simpleApiResponsePost(url, map)
             .catch { e ->

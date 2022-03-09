@@ -1,6 +1,10 @@
 package com.intell.comm.views.clientsModule.medication
 
+import android.app.Dialog
 import android.view.View
+import android.view.Window
+import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.tabs.TabLayout
 import com.intell.comm.BR
@@ -12,6 +16,8 @@ import com.intell.comm.base.views.adapter.OnItemClickListener
 import com.intell.comm.databinding.AdapterNotesListBinding
 import com.intell.comm.databinding.FragmentMedicationBinding
 import com.intell.comm.views.clientsModule.ClientsActivity
+import com.intell.comm.views.clientsModule.referral.ReferralFragmentDirections
+import com.intell.comm.views.clientsModule.vaccination.VaccinationFragmentDirections
 
 class MedicationFragment : BaseFragment<FragmentMedicationBinding, MedicationViewModel>(
     R.layout.fragment_medication,
@@ -23,14 +29,17 @@ class MedicationFragment : BaseFragment<FragmentMedicationBinding, MedicationVie
 
     override fun onCreateView() {
         (requireActivity() as ClientsActivity).isBackArrowShow(true)
-        (requireActivity() as ClientsActivity).isAddIconShow()
+        (requireActivity() as ClientsActivity).isAddIconShow(
+            true,
+            MedicationFragmentDirections.actionMedicationToAddMedication(R.string.add_medication)
+        )
         (requireActivity() as ClientsActivity).isToolbarTitleShow(
             true,
             args.toolbarTitle
         )
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Medication"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Medication Request"));
+       binding.tabLayout.addTab(binding.tabLayout.newTab().setText(requireActivity().resources.getString(R.string.medication)))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText(requireActivity().resources.getString(R.string.medication_request)))
 
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -54,6 +63,22 @@ class MedicationFragment : BaseFragment<FragmentMedicationBinding, MedicationVie
         setClientsList()
 
     }
+    private fun showDialog(title: String) {
+        val dialog = Dialog(requireActivity())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.common_dialog)
+        val body = dialog.findViewById(R.id.tv_body) as TextView
+         body.text = title
+        val yesBtn = dialog.findViewById(R.id.tv_delete) as TextView
+        val noBtn = dialog.findViewById(R.id.tv_cancel) as TextView
+        yesBtn.setOnClickListener {
+            dialog.dismiss()
+        }
+        noBtn.setOnClickListener { dialog.dismiss() }
+        dialog.show()
+
+    }
 
     private fun setClientsList() {
         val medicationListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterNotesListBinding>(
@@ -61,6 +86,14 @@ class MedicationFragment : BaseFragment<FragmentMedicationBinding, MedicationVie
             BR.model,
             object : OnItemClickListener<BaseModel> {
                 override fun onItemClick(v: View?, m: BaseModel, position: Int) {
+                    when (v?.id) {
+                        R.id.tv_edit_medication -> {
+                            navigationDirection(MedicationFragmentDirections.actionMedicationToAddMedication(R.string.edit_medication))
+                        }
+                        R.id.tv_delete_medication -> {
+                            showDialog("You want to delete this medication ?")
+                        }
+                        }
                 }
             },
             isPosition = true

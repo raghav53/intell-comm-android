@@ -13,6 +13,7 @@ import com.intell.comm.base.views.adapter.OnItemClickListener
 import com.intell.comm.databinding.AdapterAllergyListBinding
 import com.intell.comm.databinding.FragmentVaccinationBinding
 import com.intell.comm.views.clientsModule.ClientsActivity
+import com.intell.comm.views.clientsModule.clientsList.ClientsListFragmentDirections
 
 class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, VaccinationViewModel>(
     R.layout.fragment_vaccination,
@@ -23,8 +24,13 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
     var search = ""
 
     override fun onCreateView() {
+
+
         (requireActivity() as ClientsActivity).isBackArrowShow(true)
-        (requireActivity() as ClientsActivity).isAddIconShow()
+        (requireActivity() as ClientsActivity).isAddIconShow(
+            true,
+            VaccinationFragmentDirections.actionVaccinationToAddVaccination()
+        )
         (requireActivity() as ClientsActivity).isToolbarTitleShow(
             true,
             args.toolbarTitle
@@ -57,6 +63,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
 
         setClientsList()
     }
+
     private fun setClientsList() {
         val clientListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterAllergyListBinding>(
             R.layout.adapter_vaccination_list,
@@ -82,7 +89,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
                 string4 = "13/12/22",
                 string5 = "23/12/22",
                 string6 = "Jackson Bay"
-             )
+            )
         )
         list.add(
             BaseModel(
@@ -92,7 +99,7 @@ class VaccinationFragment : BaseFragment<FragmentVaccinationBinding, Vaccination
                 string4 = "13/12/22",
                 string5 = "23/12/22",
                 string6 = "Jackson Bay"
-             )
+            )
         )
         list.add(
             BaseModel(

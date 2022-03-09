@@ -40,13 +40,7 @@ class EncounterHistoryFragment :
             when (view?.id ?: 0) {
                 R.id.rl_filter -> {
                  showBottomSheetDialog("show")
-
-                }
-
-
-            }
-
-
+                } }
         }
 
         setClientsList()

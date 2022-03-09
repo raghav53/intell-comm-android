@@ -8,10 +8,9 @@ import com.intell.comm.base.model.BaseModel
 import com.intell.comm.base.views.BaseFragment
 import com.intell.comm.base.views.adapter.BaseRecyclerViewAdapter
 import com.intell.comm.base.views.adapter.OnItemClickListener
-import com.intell.comm.databinding.AdapterDiseaseRegisterBinding
+ import com.intell.comm.databinding.AdapterFileListBindingImpl
 import com.intell.comm.databinding.FragmentFilesBinding
 import com.intell.comm.views.clientsModule.ClientsActivity
-import com.intell.comm.views.clientsModule.diseaseRegister.DiseaseRegisterListFragmentDirections
 
 class FilesFragment : BaseFragment<FragmentFilesBinding, FilesViewModel>(
     R.layout.fragment_files,
@@ -27,24 +26,24 @@ class FilesFragment : BaseFragment<FragmentFilesBinding, FilesViewModel>(
             true,
             args.toolbarTitle
         )
-        setDiseaseList()
+        setFilesList()
     }
 
 
-    private fun setDiseaseList() {
-        val diseaseListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterDiseaseRegisterBinding>(
+    private fun setFilesList() {
+        val filesAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterFileListBindingImpl>(
             R.layout.adapter_file_list,
             BR.model,
             object : OnItemClickListener<BaseModel> {
                 override fun onItemClick(v: View?, m: BaseModel, position: Int) {
-//                    navigationDirection(DiseaseRegisterListFragmentDirections.actionDiseaseRegisterListToDiseaseRegisterListDetails(m.string1))
+                    navigationDirection(FilesFragmentDirections.actionFilesToFilesDetailList(m.string1))
                 }
             },
             isPosition = true
         )
 
-        binding.rvFile.adapter = diseaseListAdapter
-        diseaseListAdapter.updateList(getSwipeList())
+        binding.rvFile.adapter = filesAdapter
+        filesAdapter.updateList(getSwipeList())
     }
 
     private fun getSwipeList(): List<BaseModel> {

@@ -2,7 +2,9 @@ package com.intell.comm.views.clientsModule.notes
 
 import android.view.View
 import android.widget.EditText
+import androidx.appcompat.widget.AppCompatButton
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.intell.comm.BR
 import com.intell.comm.R
 import com.intell.comm.base.event.EditTextValueChangeEvent
@@ -30,9 +32,25 @@ class NotesFragment : BaseFragment<FragmentNotesBinding, NotesViewModel>(
             true,
             args.toolbarTitle
         )
-
+        viewModel.baseClick.observe(viewLifecycleOwner) { view ->
+            when (view?.id ?: 0) {
+                R.id.rl_filter -> {
+                    showBottomSheetDialog("show")
+                } }
+        }
         setClientsList()
     }
+
+    private fun showBottomSheetDialog(s: String) {
+        val bottomSheetDialog = BottomSheetDialog(requireActivity())
+        bottomSheetDialog.setContentView(R.layout.bottom_sheet_notes)
+        val btnSearch = bottomSheetDialog.findViewById<AppCompatButton>(R.id.btn_search)
+
+        bottomSheetDialog.show()
+
+        btnSearch?.setOnClickListener { bottomSheetDialog.dismiss() }
+    }
+
 
     private fun setClientsList() {
         val notesListAdapter = BaseRecyclerViewAdapter<BaseModel, AdapterNotesListBinding>(
@@ -75,7 +93,6 @@ class NotesFragment : BaseFragment<FragmentNotesBinding, NotesViewModel>(
         binding.rvNotes.adapter = notesListAdapter
         notesListAdapter.updateList(getSwipeList())
     }
-
     private fun getSwipeList(): List<BaseModel> {
         val list = ArrayList<BaseModel>()
         list.add(

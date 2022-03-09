@@ -5,56 +5,72 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.intell.comm.R
+import com.intell.comm.base.event.EditTextValueChangeEvent
+import com.intell.comm.base.views.BaseFragment
+import com.intell.comm.databinding.FragmentAddAllergyBinding
+import com.intell.comm.utils.validateEmail
+import com.intell.comm.utils.validateText
+import com.intell.comm.views.clientsModule.ClientsActivity
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class AddAllergyFragment : BaseFragment<FragmentAddAllergyBinding,AddAllergyViewModel>(
+    R.layout.fragment_add_allergy,
+    AddAllergyViewModel::class.java
+) {
+    private val materialDateBuilder: MaterialDatePicker.Builder<*> = MaterialDatePicker.Builder.datePicker()
+    private val materialDatePicker = materialDateBuilder.build()
+    override fun onCreateView() {
+        (requireActivity() as ClientsActivity).isBackArrowShow(true)
+        (requireActivity() as ClientsActivity).isAddIconShow()
+        (requireActivity() as ClientsActivity).isToolbarTitleShow(
+            true,
+            this.getString(R.string.add_allergy)
+        )
+        materialDateBuilder.setTitleText("SELECT START DATE")
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AddAllergyFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class AddAllergyFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        materialDatePicker.addOnPositiveButtonClickListener {
+            Toast.makeText(
+                requireContext(),
+                "Selected Date is : " + materialDatePicker.headerText,
+                Toast.LENGTH_SHORT
+            ).show()
+            binding.etStartDate.setText(materialDatePicker.headerText)
         }
-    }
+        viewModel.baseClick.observe(viewLifecycleOwner) { view ->
+            when (view?.id ?: 0) {
+                R.id.btn_submit -> {
+                        requireActivity().onBackPressed()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_allergy, container, false)
-    }
+                }
+                R.id.et_start_date -> {
+                    materialDatePicker.show(requireActivity().supportFragmentManager, "MATERIAL_DATE_PICKER")
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddAllergyFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddAllergyFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
+        }
+        viewModel.editTextValue.observe(
+            viewLifecycleOwner,
+            object : EditTextValueChangeEvent.EditTextObserver {
+                override fun onEditTextReceived(editText: EditText) {
+                    when (editText.id) {
+                        R.id.et_environment_allergy -> {
+                            //fName = validateText(requireActivity(), editText)
+                        }
+                        R.id.et_reaction -> {
+                         }
+                        R.id.et_component_type -> {
+                         }
+                        R.id.et_hiv_related -> {
+                         }
+
+                    }
+                }
+
+            })
     }
+
+
 }

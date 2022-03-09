@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.intell.comm.base.model.BaseModel" />
+
+        <variable
+            name="callback"
+            type="com.intell.comm.base.views.adapter.OnItemClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/edit_bg_white_white"
+        android:elevation="@dimen/_3sdp"
+        android:onClick="@{(v)->callback.onItemClick(v,model, position)}"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_client_name"
+            style="@style/TextViewMedium12"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{model.string1, default=Client}"
+            android:textColor="@color/btn_text_color"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tv_date"
+             android:src="@drawable/ic_bin"
+            android:layout_marginEnd="@dimen/_5sdp"
+             app:layout_constraintBottom_toBottomOf="@+id/tv_client_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="@dimen/_20sdp" android:layout_width="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/tv_nm"
+            style="@style/TextViewRegular10"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/doctor_name_"
+            android:textColor="@color/black_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_client_name" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text='@{model.string2, default=Name}'
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_nm"
+            app:layout_constraintTop_toBottomOf="@+id/tv_client_name" />
+
+        <TextView
+            android:id="@+id/tv_receive"
+            style="@style/TextViewRegular10"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/received_date"
+            android:textColor="@color/list_small_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nm" />
+        <TextView
+            android:id="@+id/tv_receive_date"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text='@{model.string3, default=Date}'
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_receive"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nm" />
+
+   <TextView
+            android:id="@+id/tv_filed"
+            style="@style/TextViewRegular10"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/filed_date"
+            android:textColor="@color/list_small_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_receive_date" />
+        <TextView
+            android:id="@+id/tv_filed_date"
+            style="@style/TextViewRegular10"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text='@{model.string4, default=Date}'
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_filed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_receive_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
